@@ -62,7 +62,6 @@ Copy-Item -Path ..\sitecustomize.py -Destination ..\VapourSynth\ -Force
 ..\VapourSynth\python.exe -m pip uninstall vapoursynth -q -y
 
 Copy-Item -Path .\vspreview\vapoursynth-preview-master\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
-Copy-Item -Path .\vspreview\vapoursynth-preview-master\run.py -Destination ..\VapourSynth\Lib\site-packages\vsp.py -Force
 Copy-Item -Path .\VSRepoGUI\VSRepoGUI.exe -Destination ..\VapourSynth\ -Force
 New-Item -Path ..\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 

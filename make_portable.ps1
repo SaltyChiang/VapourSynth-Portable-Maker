@@ -1,4 +1,4 @@
-$env:https_proxy = "http://localhost:7890"
+#$env:https_proxy = "http://localhost:7890"
 
 function DownloadFile {
     param ( [object]$Uri , [object]$OutFile , [object]$Hash )

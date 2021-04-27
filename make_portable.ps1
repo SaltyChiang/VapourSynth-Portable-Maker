@@ -44,13 +44,19 @@ Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand7Zip -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
 
-Set-Content -Path ..\VapourSynth\python*._pth -Value "python38.zip"
-Add-Content -Path ..\VapourSynth\python*._pth -Value "."
-Add-Content -Path ..\VapourSynth\python*._pth -Value "Lib\site-packages"
-Add-Content -Path ..\VapourSynth\python*._pth -Value "VapourSynthScripts"
-Add-Content -Path ..\VapourSynth\python*._pth -Value ""
-Add-Content -Path ..\VapourSynth\python*._pth -Value "import site"
+$Requirements = Get-Item .\vspreview\vapoursynth-preview-master\requirements.txt
+Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
 
+$PythonPth = (Get-Item ..\VapourSynth\python*._pth).Name
+$PythonZip = (Get-Item ..\VapourSynth\python*._pth).BaseName + ".zip"
+Set-Content -Path ..\VapourSynth\$PythonPth -Value "$PythonZip"
+Add-Content -Path ..\VapourSynth\$PythonPth -Value "."
+Add-Content -Path ..\VapourSynth\$PythonPth -Value "Lib\site-packages"
+Add-Content -Path ..\VapourSynth\$PythonPth -Value "VapourSynthScripts"
+Add-Content -Path ..\VapourSynth\$PythonPth -Value ""
+Add-Content -Path ..\VapourSynth\$PythonPth -Value "import site"
+
+Copy-Item -Path ..\sitecustomize.py -Destination ..\VapourSynth\ -Force
 ..\VapourSynth\python.exe .\get-pip.py --no-warn-script-location
 ..\VapourSynth\python.exe -m pip install -r .\vspreview\vapoursynth-preview-master\requirements.txt --no-warn-script-location
 ..\VapourSynth\python.exe -m pip uninstall vapoursynth -q -y
@@ -66,7 +72,6 @@ Remove-Item -Path .\VSRepoGUI -Recurse -Force
 
 Pop-Location
 
-Copy-Item -Path .\sitecustomize.py -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\VapourSynthEditor\ -Force
 

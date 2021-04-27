@@ -5,14 +5,14 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.8.8-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.8.8/python-3.8.8-embed-amd64.zip",
-        "hash": "5611C098AA57630D23778AD063388D220301F03144C9B71EFE259CCD5AC7A28A015D13E271FE179EDAB5F0D56951A322744E9BB3AC19F08E9AE5EE6B20B39B7B"
+        "name": "python-3.9.4-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.4/python-3.9.4-embed-amd64.zip",
+        "hash": "6E314C6F8B18DA28C7702E7908FF3D64988F18B13B8FAB54ACFE32683E92E52BEC1C8CBD94DEFD058FAAEB700BE805F1213A5E79ED0EDB9039E107B7C5D89DBB"
     },
     "vapoursynth": {
-        "name": "VapourSynth64-Portable-R52.7z",
-        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R52/VapourSynth64-Portable-R52.7z",
-        "hash": "C05AC42E793B4ED7998F1EDA677C26C9E4B8C37F7DE30B16C07B7E2496098A324F414A8E01D161AF7D719EB56E7AB28F2ED18A8B219FF670826E7110AD3703A6"
+        "name": "VapourSynth64-Portable-R53.7z",
+        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R53/VapourSynth64-Portable-R53.7z",
+        "hash": "00EC3B8FAEEA09EB34B1E156810BE387D1F95F62EDA66FC26829D902835AFC18F761C42FF7082A6E9D84169F935E2EEA7DD54DC506C225BDE53B20611EB647B6"
     },
     "vseditor": {
         "name": "VapourSynthEditor-r19-64bit.7z",

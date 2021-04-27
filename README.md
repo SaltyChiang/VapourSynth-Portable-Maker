@@ -5,12 +5,12 @@
 运行完成后需要自行将VS脚本文件(\*.py)置于`VapourSynth\VapourSynthScripts`，滤镜文件(\*.dll)置于`VapourSynth\vapoursynth64\plugins`。
 
 **vseditor**位于：
-```python
+```powershell
 VapourSynth\VapourSynthEditor\vsedit.exe
 ```
 
 
 运行以下命令来使用**vspreview**：
-```python
+```powershell
 VapourSynth\python.exe -m vspreview sample.vpy
 ```

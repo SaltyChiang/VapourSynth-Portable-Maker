@@ -10,9 +10,9 @@
         "hash": "482765DE165863F86637591D57141930E2C4CA6E210D0C2569BD0E5FE63157966FB44DEA0D5ADF249FF15EC9C50CB2DDDB704C4EA79369D598F348EE5406F160"
     },
     "vapoursynth": {
-        "name": "VapourSynth64-Portable-R54.7z",
-        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R54/VapourSynth64-Portable-R54.7z",
-        "hash": "9CE2994FCEA9F71053659755C0B0CE1D0A11EE1E1AAE9FBE3C0EC577F48EDD38B8A7D8DB6E55BE0EDBF80941EA39A95DA6ED9D20327E355E6DA529DAA3CB8369"
+        "name": "VapourSynth64-Portable-R56.7z",
+        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R56/VapourSynth64-Portable-R56.7z",
+        "hash": "E6B0D422E6C85CD3A440C4C64A9BEDE7AA928751F8F15613252CDE5A8D6293C34A03B771857D816C3DC470594E099FB0A60690DEF2EEDA615C78087666557CF8"
     },
     "vseditor": {
         "name": "VapourSynthEditor-r19-64bit.7z",

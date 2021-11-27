@@ -26,7 +26,18 @@
     },
     "vspreview": {
         "name": "vapoursynth-preview.zip",
-        "url": "https://github.com/Endilll/vapoursynth-preview/archive/refs/heads/master.zip"
+        "url": "https://github.com/DJATOM/vapoursynth-preview/archive/refs/heads/api-v4-support.zip",
+        "branch": "api-v4-support"
+    },
+    "lexpr": {
+        "name": "akarin-release-lexpr-amd64-v0.92b.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92b.7z",
+        "hash": "9136DCF407AD0C4348B16102371BAF51E84CE7AE04C43F29A3DE850C11C276474BC2ECF75BE51D252DE65739997C76F24B1798D5AF163D7FC51E3AA8B4CC3982"
+    },
+    "libp2p": {
+        "name": "LibP2P-x64.7z",
+        "url": "https://github.com/DJATOM/LibP2P-Vapoursynth/releases/download/r2/LibP2P-x64.7z",
+        "hash": "4EC5DC4644DF65FD2CD3DAB6E9C69AE495417988A16BBE9186DF55E6296A6ED380901F072A5176D55BBFB54753C476BE1825B39A8042FEBA83FF45B98D687BF9"
     },
     "getpip": {
         "name": "get-pip.py",

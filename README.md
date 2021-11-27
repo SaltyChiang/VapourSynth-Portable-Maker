@@ -1,16 +1,16 @@
-使用powershell运行`make_portable.ps1`即可构建带有vspreview和vseditor的VapourSynth包。
+Run `make_portable.ps1` in Powershell to build a PORTABLE VapourSynth with vseditor and vspreview embedded.
 
-*需要使用代理可将脚本第一句去掉注释，并更改为自己的代理地址。*
+*If you need to use your proxy, uncomment the first line and set it to porper value.*
 
-运行完成后需要自行将VS脚本文件(\*.py)置于`VapourSynth\VapourSynthScripts`，滤镜文件(\*.dll)置于`VapourSynth\vapoursynth64\plugins`。
+You need to put your VapourSynth script module file (*.py) to `VapourSynth\VapourSynthScripts`, and your filter binary file (*.dll) to `VapourSynth\vapoursynth64\plugins`.
 
-**vseditor**位于：
+**vseditor** locates at
 ```powershell
 VapourSynth\VapourSynthEditor\vsedit.exe
 ```
 
 
-运行以下命令来使用**vspreview**：
+Run such a command to preview *.vpy with **vspreview**：
 ```powershell
 VapourSynth\python.exe -m vspreview sample.vpy
 ```

@@ -1,4 +1,4 @@
-$env:https_proxy = "http://localhost:10809"
+# $env:https_proxy = "http://localhost:10809"
 
 
 function DownloadFile {

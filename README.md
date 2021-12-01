@@ -1,4 +1,4 @@
-Run `make_portable.ps1` in Powershell to build a PORTABLE VapourSynth with vseditor and vspreview embedded.
+Run `make_portable.ps1` in Powershell to build a PORTABLE VapourSynth with vseditor-mod and vspreview embedded.
 
 *If you need to use your proxy, uncomment the first line and set it to porper value.*
 

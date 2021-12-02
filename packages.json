@@ -15,9 +15,9 @@
         "hash": "C442CA19D465C1D6C20E610A5EAFF6338A508D179173E0F9290129B0A440FFBBDE52AD687E88ECC9DEA2F6BD6F1C94D7F51305571FABCF521CF7A4D7DCB8FD98"
     },
     "vseditor": {
-        "name": "VapourSynthEditor-r19-64bit.7z",
-        "url": "https://bitbucket.org/mystery_keeper/vapoursynth-editor/downloads/VapourSynthEditor-r19-64bit.7z",
-        "hash": "323246055474479CFA63A94B2C1D6398F96BD5926B42E7566D11B6982EE85221C7321D0C1C55A2DE27D48274D784740B58A1BF1B4146FD3162A90E09C2087643"
+        "name": "VapourSynth-Editor-r19-mod-5-beta-x86_64.7z",
+        "url": "https://github.com/YomikoR/VapourSynth-Editor/releases/download/r19-mod-5-beta/VapourSynth-Editor-r19-mod-5-beta-x86_64.7z",
+        "hash": "496E97D89599BE868774FA9A419230E821A51D19A33CC534D933F868740EB5F98B7F4A709E210150DDDB6382A224F690788695BDF4D53095364CBA39008F8264"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",

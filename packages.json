@@ -10,9 +10,9 @@
         "hash": "F834E3EFF1D36926C47CB84655C5799B4B499A304D8791F4D89802D2C30EF36B6EEC96B35D99484B006F0D50BDA5DB1DE77FF9F73DE5A71ED391C1742939F02C"
     },
     "vapoursynth": {
-        "name": "VapourSynth64-Portable-R57.7z",
-        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R57/VapourSynth64-Portable-R57.7z",
-        "hash": "C442CA19D465C1D6C20E610A5EAFF6338A508D179173E0F9290129B0A440FFBBDE52AD687E88ECC9DEA2F6BD6F1C94D7F51305571FABCF521CF7A4D7DCB8FD98"
+        "name": "VS-C-x64-R57.A0.zip",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A0/VS-C-x64-R57.A0.zip",
+        "hash": "D23BE36029F019F23D375924973B561E83FDBB4A5B4B577FD7AC627F824F3E5BCB727F825E9DDA249033FBF1D6A9D43027537D84593C337BD9664198E6878BB8"
     },
     "vseditor": {
         "name": "VapourSynth-Editor-r19-mod-5-beta-x86_64.7z",
@@ -25,9 +25,9 @@
         "hash": "E4925631D4A7C356203AA7BC0B772F0D844AC42D88FA779FB33CA9E7CF7B34A2E22EE9FCE96D4678EADE9D749DA9AEF647E9F61FE00E9B361F6D31E2A0414139"
     },
     "vspreview": {
-        "name": "vapoursynth-preview.zip",
-        "url": "https://github.com/DJATOM/vapoursynth-preview/archive/refs/heads/api-v4-support.zip",
-        "branch": "api-v4-support"
+        "name": "vapoursynth-preview-R55.A0.zip",
+        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R55.A0.zip",
+        "branch": "R55.A0"
     },
     "lexpr": {
         "name": "akarin-release-lexpr-amd64-v0.92b.7z",

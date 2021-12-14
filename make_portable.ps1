@@ -45,7 +45,7 @@ DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
 Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
-Expand7Zip -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
+Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins
 

@@ -1,4 +1,4 @@
-Run `make_portable.ps1` in Powershell to build a **PORTABLE** [**VapourSynth**](https://github.com/vapoursynth/vapoursynth) with [`vseditor-mod`](https://github.com/YomikoR/VapourSynth-Editor) and [`vspreview`](https://github.com/Endilll/vapoursynth-preview) embedded.
+Run `make_portable.ps1` in Powershell to build a **PORTABLE** [**VapourSynth-Classic**](https://github.com/AmusementClub/vapoursynth-classic) with [`vseditor-mod`](https://github.com/YomikoR/VapourSynth-Editor) and [`vspreview`](https://github.com/AkarinVS/vapoursynth-preview) embedded.
 
 *If you need to use your proxy, uncomment the first line and set it to porper value.*
 

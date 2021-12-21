@@ -76,6 +76,7 @@ Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String
 .\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
 
 
+Remove-Item -Path .\VapourSynth\__pycache__ -Recurse -Force
 Move-Item -Path .\VapourSynth\sitecustomize.py -Destination .\VapourSynth\Lib\ -Force
 Move-Item -Path .\VapourSynth\vapoursynth.cp*.pyd -Destination .\VapourSynth\Lib\ -Force
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force

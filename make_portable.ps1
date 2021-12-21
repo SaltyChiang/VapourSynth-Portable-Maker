@@ -56,12 +56,8 @@ if ( Test-Path -Path ..\VapourSynth\python*._pth ) {
 Expand-Archive -Path $Packages.python.name -DestinationPath ..\VapourSynth -Force
 $PythonPth = (Get-Item ..\VapourSynth\python*._pth).Name
 $PythonZip = (Get-Item ..\VapourSynth\python*._pth).BaseName + ".zip"
-Set-Content -Path ..\VapourSynth\$PythonPth -Value "$PythonZip"
-Add-Content -Path ..\VapourSynth\$PythonPth -Value "."
-Add-Content -Path ..\VapourSynth\$PythonPth -Value "Lib\site-packages"
-Add-Content -Path ..\VapourSynth\$PythonPth -Value "VapourSynthScripts"
-Add-Content -Path ..\VapourSynth\$PythonPth -Value ""
-Add-Content -Path ..\VapourSynth\$PythonPth -Value "import site"
+$PythonPthContent = (Get-Content -Path ..\pythonXX._pth -Raw).Replace("pythonXX.zip", $PythonZip)
+Set-Content -Path ..\VapourSynth\$PythonPth -Value $PythonPthContent
 Copy-Item -Path ..\sitecustomize.py -Destination ..\VapourSynth\ -Force
 
 ..\VapourSynth\python.exe .\get-pip.py --no-warn-script-location

@@ -26,12 +26,11 @@ function Expand7Zip {
 
 $Packages = Get-Content .\packages.json | ConvertFrom-Json
 
-if ( -Not (Test-Path -Path downloads)) {
+if ( -Not (Test-Path -Path downloads) ) {
     New-Item -Path downloads -ItemType Directory -Force | Out-Null
 }
+
 Push-Location -Path .\downloads
-
-
 DownloadFile -Uri $Packages.'7za'.url -OutFile $Packages.'7za'.name -Hash $Packages.'7za'.hash
 DownloadFile -Uri $Packages.python.url -OutFile $Packages.python.name -Hash $Packages.python.hash
 DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name -Hash $Packages.vapoursynth.hash
@@ -40,50 +39,56 @@ DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Has
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
 DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
+Pop-Location
 
 
-if ( Test-Path -Path ..\VapourSynth\python*._pth ) {
-    Remove-Item -Path ..\VapourSynth\python*._pth -Force
+if ( Test-Path -Path .\VapourSynth\python*._pth ) {
+    Remove-Item -Path .\VapourSynth\python*._pth -Force
 }
-Expand-Archive -Path $Packages.python.name -DestinationPath ..\VapourSynth -Force
-$PythonPth = (Get-Item ..\VapourSynth\python*._pth).Name
-$PythonZip = (Get-Item ..\VapourSynth\python*._pth).BaseName + ".zip"
-Set-Content -Path ..\VapourSynth\$PythonPth -Value (Get-Content -Path ..\pythonXX._pth -Raw).Replace("pythonXX.zip", $PythonZip)
-New-Item -Path ..\VapourSynth\DLLs -ItemType Directory -Force | Out-Null
-Move-Item -Path ..\VapourSynth\*.pyd -Destination ..\VapourSynth\DLLs\ -Force
-Move-Item -Path ..\VapourSynth\*.dll -Destination ..\VapourSynth\DLLs\ -Force
-Move-Item -Path ..\VapourSynth\DLLs\python*.dll -Destination ..\VapourSynth\ -Force
-Copy-Item -Path ..\VapourSynth\DLLs\vcruntime*.dll -Destination ..\VapourSynth\ -Force
-Copy-Item -Path ..\sitecustomize.py -Destination ..\VapourSynth\DLLs\ -Force
+if ( -Not (Test-Path -Path VapourSynth\DLLs) ) {
+    New-Item -Path .\VapourSynth\DLLs -ItemType Directory -Force | Out-Null
+}
+Expand-Archive -Path .\downloads\$($Packages.python.name) -DestinationPath .\VapourSynth -Force
+$PythonPth = (Get-Item .\VapourSynth\python*._pth).Name
+$PythonZip = (Get-Item .\VapourSynth\python*._pth).BaseName + ".zip"
+Set-Content -Path .\VapourSynth\$PythonPth -Value (Get-Content -Path .\pythonXX._pth -Raw).Replace("pythonXX.zip", $PythonZip)
+Move-Item -Path .\VapourSynth\python.cat -Destination .\VapourSynth\DLLs\ -Force
+Move-Item -Path .\VapourSynth\*.pyd -Destination .\VapourSynth\DLLs\ -Force
+Move-Item -Path .\VapourSynth\*.dll -Destination .\VapourSynth\DLLs\ -Force
+Move-Item -Path .\VapourSynth\DLLs\python*.dll -Destination .\VapourSynth\ -Force
+Move-Item -Path .\VapourSynth\DLLs\vcruntime*.dll -Destination .\VapourSynth\ -Force
+Copy-Item -Path .\sitecustomize.py -Destination .\VapourSynth\ -Force
 
 
+Push-Location -Path downloads
 Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins
+Pop-Location
 
 
-..\VapourSynth\python.exe .\get-pip.py --no-warn-script-location
-
-$Requirements = Get-Item .\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\requirements.txt
+.\VapourSynth\python.exe .\downloads\get-pip.py --no-warn-script-location
+$Requirements = Get-Item .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\requirements.txt
 Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
-..\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
+.\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
 
 
-Move-Item -Path ..\VapourSynth\vapoursynth.cp*.pyd -Destination ..\VapourSynth\Lib\ -Force
-Copy-Item -Path .\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination ..\VapourSynth\Lib\site-packages\ -Recurse -Force
-Copy-Item -Path .\VSRepoGUI\VSRepoGUI.exe -Destination ..\VapourSynth\ -Force
-Copy-Item -Path ..\vsrepogui.json -Destination ..\VapourSynth\ -Force
-Copy-Item -Path ..\vsedit.config -Destination ..\VapourSynth\VapourSynthEditor\ -Force
-New-Item -Path ..\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
+Move-Item -Path .\VapourSynth\sitecustomize.py -Destination .\VapourSynth\Lib\ -Force
+Move-Item -Path .\VapourSynth\vapoursynth.cp*.pyd -Destination .\VapourSynth\Lib\ -Force
+Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
+Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
+Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
+Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\VapourSynthEditor\ -Force
+New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 
-Remove-Item -Path .\7za -Recurse -Force
-Remove-Item -Path .\vspreview -Recurse -Force
-Remove-Item -Path .\VSRepoGUI -Recurse -Force
-
+Push-Location -Path downloads
+Remove-Item -Path 7za -Recurse -Force
+Remove-Item -Path vspreview -Recurse -Force
+Remove-Item -Path VSRepoGUI -Recurse -Force
 Pop-Location
 
 

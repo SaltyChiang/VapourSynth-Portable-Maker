@@ -39,6 +39,9 @@ DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash 
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
 DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
+DownloadFile -Uri $Packages.ocr.url -OutFile $Packages.ocr.name -Hash $Packages.ocr.hash
+DownloadFile -Uri $Packages.imwri.url -OutFile $Packages.imwri.name -Hash $Packages.imwri.hash
+DownloadFile -Uri $Packages.subtext.url -OutFile $Packages.subtext.name -Hash $Packages.subtext.hash
 Pop-Location
 
 
@@ -66,7 +69,10 @@ Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 # Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\
-Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins
+Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins\
+Expand7Zip -Path $Packages.ocr.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
+Expand7Zip -Path $Packages.imwri.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
+Expand7Zip -Path $Packages.subtext.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
 Pop-Location
 
 
@@ -83,6 +89,7 @@ Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 # Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
+New-Item -Path .\VapourSynth\vsedit.config -Force | Out-Null
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 
@@ -96,6 +103,8 @@ Pop-Location
 Remove-Item -Path .\VapourSynth\vs-detect-python.bat
 Remove-Item -Path .\VapourSynth\VSScriptPython38.dll
 Remove-Item -Path .\VapourSynth\setup.py
+Remove-Item -Path .\VapourSynth\MANIFEST.in
+Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
 
 
 Write-Output "Done."

@@ -37,5 +37,20 @@
     "getpip": {
         "name": "get-pip.py",
         "url": "https://bootstrap.pypa.io/get-pip.py"
+    },
+    "ocr": {
+        "name": "OCR-x64-R55.A2.7z",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/OCR-x64-R55.A2.7z",
+        "hash": "303F23C92C8B7737C86981D2893AF9BA784A9981E54BD0D07459BA1C60A0E56CCFAF7022F1BB8A818468A27884E2324DB7602D9E31972A61050EB89441A990A3"
+    },
+    "imwri": {
+        "name": "Imwri-x64-R55.A2.7z",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Imwri-x64-R55.A2.7z",
+        "hash": "F32A300474C2D60361831D64C615FEA05D873EF82FBE601F72B5175FB5875774A07C2ECAF87471D5B758D4B2319DECCB1F2F58C030701F8BB1443EA707487058"
+    },
+    "subtext": {
+        "name": "Subtext-x64-R55.A2b.7z",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Subtext-x64-R55.A2b.7z",
+        "hash": "6144E3A6C795EAC00294793808AA8C21285B37EEF71038B0B358FD1776D54E28EF3B02BB32429A3E0E2EDD726901F193C02931B1D42B4A7CDCEC4AC4CFD64978"
     }
 }

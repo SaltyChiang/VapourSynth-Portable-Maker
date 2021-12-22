@@ -35,7 +35,7 @@ DownloadFile -Uri $Packages.'7za'.url -OutFile $Packages.'7za'.name -Hash $Packa
 DownloadFile -Uri $Packages.python.url -OutFile $Packages.python.name -Hash $Packages.python.hash
 DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name -Hash $Packages.vapoursynth.hash
 DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash $Packages.vseditor.hash
-DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
+# DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
 DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
@@ -63,7 +63,7 @@ Copy-Item -Path .\sitecustomize.py -Destination .\VapourSynth\ -Force
 Push-Location -Path downloads
 Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
-Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
+# Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins
@@ -80,17 +80,22 @@ Remove-Item -Path .\VapourSynth\__pycache__ -Recurse -Force
 Move-Item -Path .\VapourSynth\sitecustomize.py -Destination .\VapourSynth\Lib\ -Force
 Move-Item -Path .\VapourSynth\vapoursynth.cp*.pyd -Destination .\VapourSynth\Lib\ -Force
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
-Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
+# Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
-Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
+# Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 
 Push-Location -Path downloads
 Remove-Item -Path 7za -Recurse -Force
 Remove-Item -Path vspreview -Recurse -Force
-Remove-Item -Path VSRepoGUI -Recurse -Force
+# Remove-Item -Path VSRepoGUI -Recurse -Force
 Pop-Location
+
+# Remove some extra files we don't need.
+Remove-Item -Path .\VapourSynth\vs-detect-python.bat
+Remove-Item -Path .\VapourSynth\VSScriptPython38.dll
+Remove-Item -Path .\VapourSynth\setup.py
 
 
 Write-Output "Done."

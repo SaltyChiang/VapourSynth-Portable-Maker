@@ -65,7 +65,7 @@ Expand-Archive -Path $Packages.'7za'.name -DestinationPath "7za" -Force
 Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
-Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
+Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins
 Pop-Location
 
@@ -82,7 +82,7 @@ Move-Item -Path .\VapourSynth\vapoursynth.cp*.pyd -Destination .\VapourSynth\Lib
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
 Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
-Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\VapourSynthEditor\ -Force
+Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 

@@ -15,9 +15,9 @@
         "hash": "D23BE36029F019F23D375924973B561E83FDBB4A5B4B577FD7AC627F824F3E5BCB727F825E9DDA249033FBF1D6A9D43027537D84593C337BD9664198E6878BB8"
     },
     "vseditor": {
-        "name": "vsedit-single-exe.r19-mod-4-AC2.7z",
-        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-4-AC/vsedit-single-exe.r19-mod-4-AC2.7z",
-        "hash": "4588E3BF6A44E4573D09C5FC138B44515AF3C49D3ED26F361CFADBD09EE4F1C7F69B5E2DAF0F0410F434B5C7782DFA702753C37A76FF01713807E9A79BE19FAF"
+        "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
+        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-4-AC2/vsedit-windows-x64.r19-mod-4-AC2.7z",
+        "hash": "4C4973CB6194E24C925094A8E721BABAB3BAABF2BE0E93614630F31B6528742364B11A293E1FF9E7D3274B7C2A9B1CFD7814A8C02DD3CF6BE7CEBAA3ECE13E77"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",

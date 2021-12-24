@@ -10,7 +10,7 @@ function DownloadFile {
     if ( -Not ([string]::IsNullOrEmpty($Hash))) {
         $FileHash = Get-FileHash -Path $OutFile -Algorithm SHA512
         if ( -Not ($FileHash.Hash -eq $Hash)) {
-            Write-Output "$OutFile is corrupt. Delete it and try again"
+            Write-Output "$OutFile is broken. Delete it and try again"
             exit
         }
     }
@@ -100,11 +100,12 @@ Remove-Item -Path vspreview -Recurse -Force
 Pop-Location
 
 # Remove some extra files we don't need.
-Remove-Item -Path .\VapourSynth\vs-detect-python.bat
-Remove-Item -Path .\VapourSynth\VSScriptPython38.dll
-Remove-Item -Path .\VapourSynth\setup.py
-Remove-Item -Path .\VapourSynth\MANIFEST.in
+Remove-Item -Path .\VapourSynth\LICENSE.txt
+Remove-Item -Path .\VapourSynth\setup.py, .\VapourSynth\MANIFEST.in
 Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
+Remove-Item -Path .\VapourSynth\vs-detect-python.bat, .\VapourSynth\VSScriptPython38.dll
+Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\LICENSE
+Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
 
 
 Write-Output "Done."

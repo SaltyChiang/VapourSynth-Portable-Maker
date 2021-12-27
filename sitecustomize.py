@@ -1,7 +1,9 @@
 import site
 import sys
 
-site.ENABLE_USER_SITE = None
-if site.USER_SITE in sys.path:
-    sys.path.remove(site.USER_SITE)
-sys.path.insert(0, "")
+site.ENABLE_USER_SITE = False
+local_path = [""]
+for path in sys.path:
+    if site.USER_SITE not in path:
+        local_path.append(path)
+sys.path = local_path

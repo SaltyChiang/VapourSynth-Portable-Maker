@@ -27,7 +27,8 @@
     "vspreview": {
         "name": "vapoursynth-preview-R55.A0.zip",
         "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R55.A0.zip",
-        "branch": "R55.A0"
+        "branch": "R55.A0",
+        "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
     },
     "lexpr": {
         "name": "akarin-release-lexpr-amd64-v0.92b.7z",
@@ -44,13 +45,18 @@
         "hash": "303F23C92C8B7737C86981D2893AF9BA784A9981E54BD0D07459BA1C60A0E56CCFAF7022F1BB8A818468A27884E2324DB7602D9E31972A61050EB89441A990A3"
     },
     "imwri": {
-        "name": "Imwri-x64-R55.A2.7z",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Imwri-x64-R55.A2.7z",
-        "hash": "F32A300474C2D60361831D64C615FEA05D873EF82FBE601F72B5175FB5875774A07C2ECAF87471D5B758D4B2319DECCB1F2F58C030701F8BB1443EA707487058"
+        "name": "Imwri-x64-hybrid.R2.7z",
+        "url": "https://github.com/AmusementClub/vs-imwri/releases/download/vA.R2/Imwri-x64-hybrid.R2.7z",
+        "hash": "40261F972429BC44A79BD1C362CE29F62A4C84A118181A6CDE9B768CE7B495644932666FB4BADB70CA21C10DA6DC50CE11F67B6515E7F1F6ABEC588C1B4E8A88"
     },
     "subtext": {
         "name": "Subtext-x64-R55.A2b.7z",
         "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Subtext-x64-R55.A2b.7z",
         "hash": "6144E3A6C795EAC00294793808AA8C21285B37EEF71038B0B358FD1776D54E28EF3B02BB32429A3E0E2EDD726901F193C02931B1D42B4A7CDCEC4AC4CFD64978"
+    },
+    "vsstubs": {
+        "name": "vsstubs.zip",
+        "url": "https://github.com/SaltyChiang/VapourSynth-Plugins-Stub-Generator/archive/refs/heads/R57Classic.zip",
+        "branch": "R57Classic"
     }
 }

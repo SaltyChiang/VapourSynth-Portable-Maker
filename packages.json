@@ -10,14 +10,14 @@
         "hash": "F834E3EFF1D36926C47CB84655C5799B4B499A304D8791F4D89802D2C30EF36B6EEC96B35D99484B006F0D50BDA5DB1DE77FF9F73DE5A71ED391C1742939F02C"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A1.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A1/release-x64.zip",
-        "hash": "3C54078DF4E2F587BB937F22780470EB512C72B5CA4C0B4BA368BAAD2DC55E9F49CF4A58D035B177A29D83FB8BBF62F9FBFB4604572DE13D339BBBBDF89A0FD5"
+        "name": "VapourSynth64-Portable-R54.7z",
+        "url": "https://github.com/vapoursynth/vapoursynth/releases/download/R54/VapourSynth64-Portable-R54.7z",
+        "hash": "9CE2994FCEA9F71053659755C0B0CE1D0A11EE1E1AAE9FBE3C0EC577F48EDD38B8A7D8DB6E55BE0EDBF80941EA39A95DA6ED9D20327E355E6DA529DAA3CB8369"
     },
     "vseditor": {
-        "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-4-AC2/vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "hash": "4C4973CB6194E24C925094A8E721BABAB3BAABF2BE0E93614630F31B6528742364B11A293E1FF9E7D3274B7C2A9B1CFD7814A8C02DD3CF6BE7CEBAA3ECE13E77"
+        "name": "VapourSynthEditor-r19-64bit.7z",
+        "url": "https://bitbucket.org/mystery_keeper/vapoursynth-editor/downloads/VapourSynthEditor-r19-64bit.7z",
+        "hash": "323246055474479CFA63A94B2C1D6398F96BD5926B42E7566D11B6982EE85221C7321D0C1C55A2DE27D48274D784740B58A1BF1B4146FD3162A90E09C2087643"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",
@@ -25,38 +25,12 @@
         "hash": "E4925631D4A7C356203AA7BC0B772F0D844AC42D88FA779FB33CA9E7CF7B34A2E22EE9FCE96D4678EADE9D749DA9AEF647E9F61FE00E9B361F6D31E2A0414139"
     },
     "vspreview": {
-        "name": "vapoursynth-preview-R55.A0.zip",
-        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R55.A0.zip",
-        "branch": "R55.A0",
-        "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
-    },
-    "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92b.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92b.7z",
-        "hash": "9136DCF407AD0C4348B16102371BAF51E84CE7AE04C43F29A3DE850C11C276474BC2ECF75BE51D252DE65739997C76F24B1798D5AF163D7FC51E3AA8B4CC3982"
+        "name": "vapoursynth-preview-master.zip",
+        "url": "https://github.com/Endilll/vapoursynth-preview/archive/refs/heads/master.zip",
+        "branch": "master"
     },
     "getpip": {
         "name": "get-pip.py",
         "url": "https://bootstrap.pypa.io/get-pip.py"
-    },
-    "ocr": {
-        "name": "OCR-x64-R55.A2.7z",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/OCR-x64-R55.A2.7z",
-        "hash": "303F23C92C8B7737C86981D2893AF9BA784A9981E54BD0D07459BA1C60A0E56CCFAF7022F1BB8A818468A27884E2324DB7602D9E31972A61050EB89441A990A3"
-    },
-    "imwri": {
-        "name": "Imwri-x64-hybrid.R2.7z",
-        "url": "https://github.com/AmusementClub/vs-imwri/releases/download/vA.R2/Imwri-x64-hybrid.R2.7z",
-        "hash": "40261F972429BC44A79BD1C362CE29F62A4C84A118181A6CDE9B768CE7B495644932666FB4BADB70CA21C10DA6DC50CE11F67B6515E7F1F6ABEC588C1B4E8A88"
-    },
-    "subtext": {
-        "name": "Subtext-x64-R55.A2b.7z",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Subtext-x64-R55.A2b.7z",
-        "hash": "6144E3A6C795EAC00294793808AA8C21285B37EEF71038B0B358FD1776D54E28EF3B02BB32429A3E0E2EDD726901F193C02931B1D42B4A7CDCEC4AC4CFD64978"
-    },
-    "vsstubs": {
-        "name": "vsstubs.zip",
-        "url": "https://github.com/SaltyChiang/VapourSynth-Plugins-Stub-Generator/archive/refs/heads/R57Classic.zip",
-        "branch": "R57Classic"
     }
 }

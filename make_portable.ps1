@@ -83,6 +83,7 @@ Pop-Location
 $Requirements = Get-Item .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\requirements.txt
 Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
 .\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
+.\VapourSynth\python.exe -m pip install -r .\requirements.txt --no-warn-script-location
 .\VapourSynth\python.exe -m pip install .\downloads\vsstubs\VapourSynth-Plugins-Stub-Generator-$($Packages.vsstubs.branch)\vsstubs\ --no-warn-script-location
 .\VapourSynth\python.exe -m vsstubs install
 
@@ -95,8 +96,7 @@ Move-Item -Path .\VapourSynth\vapoursynth.cp39-win_amd64.pyd -Destination .\Vapo
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
-# Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
-New-Item -Path .\VapourSynth\vsedit.config -Force | Out-Null
+Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 

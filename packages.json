@@ -31,9 +31,9 @@
         "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92b.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92b.7z",
-        "hash": "9136DCF407AD0C4348B16102371BAF51E84CE7AE04C43F29A3DE850C11C276474BC2ECF75BE51D252DE65739997C76F24B1798D5AF163D7FC51E3AA8B4CC3982"
+        "name": "akarin-release-lexpr-amd64-v0.92c.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92c.7z",
+        "hash": "DFE4A8CD5EC359B5DADB3C1A92F7A5972A511DB903B593EDDD1FD505DDFF5EE1123ACBFEA163ED09EDFECFF5B4FC3DD979DBE212577CB3D3BF5BE12A22AB128E"
     },
     "getpip": {
         "name": "get-pip.py",
@@ -50,9 +50,9 @@
         "hash": "40261F972429BC44A79BD1C362CE29F62A4C84A118181A6CDE9B768CE7B495644932666FB4BADB70CA21C10DA6DC50CE11F67B6515E7F1F6ABEC588C1B4E8A88"
     },
     "subtext": {
-        "name": "Subtext-x64-R55.A2b.7z",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/Subtext-x64-R55.A2b.7z",
-        "hash": "6144E3A6C795EAC00294793808AA8C21285B37EEF71038B0B358FD1776D54E28EF3B02BB32429A3E0E2EDD726901F193C02931B1D42B4A7CDCEC4AC4CFD64978"
+        "name": "subtext_R2.1_0.15.2.zip",
+        "url": "https://github.com/Masaiki/subtext/releases/download/R2.1/subtext_R2.1_0.15.2.zip",
+        "hash": "CE856957C9B0AC9C8BFFAE274290A086FA1A68B2984B2CD5783F9DF6EA07336DD4F9C46D6F952F0AD16373D7C53AC0E6B7A18DEAAD23AA7D5FC67C9E80A28FA7"
     },
     "vsstubs": {
         "name": "vsstubs.zip",

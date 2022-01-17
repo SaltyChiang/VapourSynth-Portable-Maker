@@ -75,7 +75,7 @@ Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins\
 Expand7Zip -Path $Packages.ocr.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
 Expand7Zip -Path $Packages.imwri.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
-Expand7Zip -Path $Packages.subtext.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
+Expand-Archive -Path $Packages.subtext.name -Destination ..\subtext -Force
 Pop-Location
 
 
@@ -98,6 +98,7 @@ Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
+Copy-Item -Path .\subtext\x64\subtext.dll -Destination .\VapourSynth\vapoursynth64\coreplugins\ -Force
 
 
 Push-Location -Path downloads

@@ -1,0 +1,34 @@
+name: Build
+on:
+  - push
+  - pull_request
+  - workflow_dispatch
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build portable
+        shell: pwsh
+        run: .\make_portable.ps1
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: |
+            VapourSynth
+
+      - name: Compress release
+        shell: cmd
+        run:
+          7z a -t7z -mx=3 release.7z VapourSynth
+
+      - name: Upload release
+        uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: |
+            release.7z

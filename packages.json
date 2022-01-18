@@ -39,6 +39,11 @@
         "name": "get-pip.py",
         "url": "https://bootstrap.pypa.io/get-pip.py"
     },
+    "coreplugins": {
+        "name": "VS-C-x64-R57.A0.zip",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A0/VS-C-x64-R57.A0.zip",
+        "hash": "D23BE36029F019F23D375924973B561E83FDBB4A5B4B577FD7AC627F824F3E5BCB727F825E9DDA249033FBF1D6A9D43027537D84593C337BD9664198E6878BB8"
+    },
     "ocr": {
         "name": "OCR-x64-R55.A2.7z",
         "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R55.A2b/OCR-x64-R55.A2.7z",

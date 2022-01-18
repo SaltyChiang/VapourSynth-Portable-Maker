@@ -40,6 +40,7 @@ DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash 
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name -Hash $Packages.vspreview.hash
 DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
+DownloadFile -Uri $Packages.coreplugins.url -OutFile $Packages.coreplugins.name -Hash $Packages.coreplugins.hash
 DownloadFile -Uri $Packages.ocr.url -OutFile $Packages.ocr.name -Hash $Packages.ocr.hash
 DownloadFile -Uri $Packages.imwri.url -OutFile $Packages.imwri.name -Hash $Packages.imwri.hash
 DownloadFile -Uri $Packages.subtext.url -OutFile $Packages.subtext.name -Hash $Packages.subtext.hash
@@ -73,9 +74,12 @@ Expand-Archive -Path $Packages.vsstubs.name -DestinationPath vsstubs -Force
 Expand-Archive -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\
 Expand7Zip -Path $Packages.lexpr.name -Destination ..\VapourSynth\vapoursynth64\plugins\
-Expand7Zip -Path $Packages.ocr.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
-Expand7Zip -Path $Packages.imwri.name -Destination ..\VapourSynth\vapoursynth64\coreplugins\
-Expand-Archive -Path $Packages.subtext.name -Destination ..\subtext -Force
+Expand-Archive -Path $Packages.coreplugins.name -DestinationPath coreplugins -Force
+Expand7Zip -Path $Packages.ocr.name -Destination .\coreplugins\vapoursynth64\coreplugins\
+Expand7Zip -Path $Packages.imwri.name -Destination .\coreplugins\vapoursynth64\coreplugins\
+Expand-Archive -Path $Packages.subtext.name -DestinationPath subtext -Force
+Copy-Item -Path .\subtext\x64\subtext.dll -Destination .\coreplugins\vapoursynth64\coreplugins\ -Force
+Copy-Item -Path .\coreplugins\vapoursynth64\coreplugins -Destination ..\VapourSynth\vapoursynth64\coreplugins -Recurse -Force
 Pop-Location
 
 
@@ -98,7 +102,6 @@ Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
-Copy-Item -Path .\subtext\x64\subtext.dll -Destination .\VapourSynth\vapoursynth64\coreplugins\ -Force
 
 
 Push-Location -Path downloads
@@ -106,6 +109,8 @@ Remove-Item -Path 7za -Recurse -Force
 Remove-Item -Path vspreview -Recurse -Force
 # Remove-Item -Path VSRepoGUI -Recurse -Force
 Remove-Item -Path vsstubs -Recurse -Force
+Remove-Item -Path coreplugins -Recurse -Force
+Remove-Item -Path subtext -Recurse -Force
 Pop-Location
 
 # Remove some extra files we don't need.

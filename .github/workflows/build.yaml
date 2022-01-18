@@ -1,0 +1,42 @@
+name: Build
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'which tag to create and release?'
+        required: true
+        default: 'v100'
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build portable
+        shell: pwsh
+        run: .\make_portable.ps1
+
+      - name: Compress release
+        shell: cmd
+        run:
+          7z a -t7z -mx=3 release.7z VapourSynth
+
+      - name: Upload release
+        uses: actions/upload-artifact@v2
+        with:
+          name: release
+          path: |
+            release.7z
+
+      - name: Release
+        if: github.event_name == 'workflow_dispatch' && github.event.inputs.tag != ''
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ github.event.inputs.tag }}
+          files: release.7z
+          fail_on_unmatched_files: true
+          generate_release_notes: false
+          prerelease: true

@@ -10,9 +10,9 @@
         "hash": "F834E3EFF1D36926C47CB84655C5799B4B499A304D8791F4D89802D2C30EF36B6EEC96B35D99484B006F0D50BDA5DB1DE77FF9F73DE5A71ED391C1742939F02C"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A1.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A1/release-x64.zip",
-        "hash": "3C54078DF4E2F587BB937F22780470EB512C72B5CA4C0B4BA368BAAD2DC55E9F49CF4A58D035B177A29D83FB8BBF62F9FBFB4604572DE13D339BBBBDF89A0FD5"
+        "name": "VS-C-x64-R57.A2.zip",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A2/release-x64.zip",
+        "hash": "FB47BD5C49C968246158A7C6B0B63B7AE67D06D23D757D472B11EB2A80ECCDD286BBA941A91C199271B0BF4F3908A5B73DB64B02D123B08641F16CD97A80DCC1"
     },
     "vseditor": {
         "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
@@ -38,11 +38,6 @@
     "getpip": {
         "name": "get-pip.py",
         "url": "https://bootstrap.pypa.io/get-pip.py"
-    },
-    "coreplugins": {
-        "name": "VS-C-x64-R57.A0.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A0/VS-C-x64-R57.A0.zip",
-        "hash": "D23BE36029F019F23D375924973B561E83FDBB4A5B4B577FD7AC627F824F3E5BCB727F825E9DDA249033FBF1D6A9D43027537D84593C337BD9664198E6878BB8"
     },
     "ocr": {
         "name": "OCR-x64-R55.A2.7z",

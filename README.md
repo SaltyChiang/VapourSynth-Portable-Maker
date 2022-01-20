@@ -11,5 +11,5 @@ VapourSynth\python.exe -m vspreview test.vpy
 
 **`vseditor`** locates at
 ```powershell
-VapourSynth\VapourSynthEditor\vsedit.exe
+VapourSynth\vsedit.exe
 ```

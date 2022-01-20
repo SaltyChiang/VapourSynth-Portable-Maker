@@ -9,7 +9,4 @@ If you want to check if VapourSynth and `vspreview` are installed properly, you 
 VapourSynth\python.exe -m vspreview test.vpy
 ```
 
-**`vseditor`** locates at
-```powershell
-VapourSynth\VapourSynthEditor\vsedit.exe
-```
+**`vseditor`** locates at `VapourSynth\VapourSynthEditor\vsedit.exe`, double clip to execute it and content of `test.vpy` will be shown if everything is correctly installed.

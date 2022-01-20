@@ -38,7 +38,7 @@ DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name 
 DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash $Packages.vseditor.hash
 # DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
-DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name
+DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
 Pop-Location
 
@@ -94,6 +94,9 @@ Remove-Item -Path 7za -Recurse -Force
 Remove-Item -Path vspreview -Recurse -Force
 # Remove-Item -Path VSRepoGUI -Recurse -Force
 Pop-Location
+
+# Remove more useless files
+Remove-Item -Path .\VapourSynth\vs-detect-python.bat
 
 
 Write-Output "Done."

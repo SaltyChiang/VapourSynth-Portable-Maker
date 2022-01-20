@@ -5,9 +5,9 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.9-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.9/python-3.9.9-embed-amd64.zip",
-        "hash": "F834E3EFF1D36926C47CB84655C5799B4B499A304D8791F4D89802D2C30EF36B6EEC96B35D99484B006F0D50BDA5DB1DE77FF9F73DE5A71ED391C1742939F02C"
+        "name": "python-3.9.10-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.10/python-3.9.10-embed-amd64.zip",
+        "hash": "19F4246411F2CDC27959C9CA2E7FFB7EC0F966AFE2EBFC792FA3F1156BA6FDEAC006DC9FF5E464F0FCC4EDAAC0E9CFFC2C38A80E0D833088A9C56B7BA3DCF786"
     },
     "vapoursynth": {
         "name": "VapourSynth64-Portable-R57.7z",
@@ -15,9 +15,9 @@
         "hash": "C442CA19D465C1D6C20E610A5EAFF6338A508D179173E0F9290129B0A440FFBBDE52AD687E88ECC9DEA2F6BD6F1C94D7F51305571FABCF521CF7A4D7DCB8FD98"
     },
     "vseditor": {
-        "name": "VapourSynth-Editor-r19-mod-5-beta-x86_64.7z",
-        "url": "https://github.com/YomikoR/VapourSynth-Editor/releases/download/r19-mod-5-beta/VapourSynth-Editor-r19-mod-5-beta-x86_64.7z",
-        "hash": "496E97D89599BE868774FA9A419230E821A51D19A33CC534D933F868740EB5F98B7F4A709E210150DDDB6382A224F690788695BDF4D53095364CBA39008F8264"
+        "name": "VapourSynth-Editor-r19-mod-5-beta2-Qt6-x86_64.7z",
+        "url": "https://github.com/YomikoR/VapourSynth-Editor/releases/download/r19-mod-5-beta2/VapourSynth-Editor-r19-mod-5-beta2-Qt6-x86_64.7z",
+        "hash": "19F5116EB424B4F0B3E98B03D31645FB6862F67C90B2C178138D8159FE5A972A9F801108B8E1EEDED2C930DD81FBFB9771F70A569E248B26146A16F445BCB617"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",
@@ -30,9 +30,9 @@
         "branch": "R55.A0"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92b.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92b.7z",
-        "hash": "9136DCF407AD0C4348B16102371BAF51E84CE7AE04C43F29A3DE850C11C276474BC2ECF75BE51D252DE65739997C76F24B1798D5AF163D7FC51E3AA8B4CC3982"
+        "name": "akarin-release-lexpr-amd64-v0.92c.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92c.7z",
+        "hash": "DFE4A8CD5EC359B5DADB3C1A92F7A5972A511DB903B593EDDD1FD505DDFF5EE1123ACBFEA163ED09EDFECFF5B4FC3DD979DBE212577CB3D3BF5BE12A22AB128E"
     },
     "getpip": {
         "name": "get-pip.py",

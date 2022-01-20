@@ -86,7 +86,6 @@ Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\VapourSynthEditor\ -Force
-New-Item -Path .\VapourSynth\vsedit.config -Force | Out-Null
 New-Item -Path .\VapourSynth\vapoursynth64\scripts -ItemType Directory -Force | Out-Null
 
 

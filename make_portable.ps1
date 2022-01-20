@@ -96,7 +96,8 @@ Remove-Item -Path vspreview -Recurse -Force
 Pop-Location
 
 # Remove more useless files
-Remove-Item -Path .\VapourSynth\vs-detect-python.bat
+Remove-Item -Path .\VapourSynth\setup.py, .\VapourSynth\MANIFEST.in
+Remove-Item -Path .\VapourSynth\vs-detect-python.bat, .\VapourSynth\VSScriptPython38.dll
 
 
 Write-Output "Done."

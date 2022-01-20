@@ -38,6 +38,7 @@ DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name 
 DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash $Packages.vseditor.hash
 # DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name
+DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name
 DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
 Pop-Location
 
@@ -66,6 +67,7 @@ Expand-Archive -Path $Packages.vspreview.name -DestinationPath vspreview -Force
 # Expand-Archive -Path $Packages.vsrepogui.name -DestinationPath VSRepoGUI -Force
 Expand7Zip -Path $Packages.vapoursynth.name -Destination ..\VapourSynth -Force
 Expand7Zip -Path $Packages.vseditor.name -Destination ..\VapourSynth\VapourSynthEditor
+Expand7Zip -Path $Packages.lexpr.name -Destination ..\Vapoursynth\vapoursynth64\plugins\
 Pop-Location
 
 
@@ -73,7 +75,6 @@ Pop-Location
 $Requirements = Get-Item .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\requirements.txt
 Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
 .\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
-.\VapourSynth\python.exe -m pip install flake8 black --no-warn-script-location
 
 
 if ( Test-Path -Path .\VapourSynth\__pycache__ ) {

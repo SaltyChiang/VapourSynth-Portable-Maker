@@ -1,6 +1,6 @@
 Run `make_portable.ps1` in Powershell to build a **PORTABLE** [**VapourSynth-Classic**](https://github.com/AmusementClub/vapoursynth-classic) with [`vseditor-mod`](https://github.com/YomikoR/VapourSynth-Editor) and [`vspreview`](https://github.com/AkarinVS/vapoursynth-preview) embedded.
 
-*If you need to use your proxy, uncomment the first line and set it to porper value.*
+*If you need to use your proxy, uncomment the first line and set it to proper value.*
 
 You need to put your VapourSynth script module file (\*.py) in `VapourSynth\vapoursynth64\scripts`, and your filter binary file (\*.dll) in `VapourSynth\vapoursynth64\plugins`.
 

@@ -31,9 +31,9 @@
         "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92c.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92c.7z",
-        "hash": "DFE4A8CD5EC359B5DADB3C1A92F7A5972A511DB903B593EDDD1FD505DDFF5EE1123ACBFEA163ED09EDFECFF5B4FC3DD979DBE212577CB3D3BF5BE12A22AB128E"
+        "name": "akarin-release-lexpr-amd64-v0.92e.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92e.7z",
+        "hash": "B6A8C5F00ABD6BD50CBFA7A95E4E596EA283627B30AD4EA1EEC809EB944B5BB0886A71FBC2FB6EE914D882473545273BACDD977925FA9B8673BE2F7F7B4DCA30"
     },
     "getpip": {
         "name": "get-pip.py",

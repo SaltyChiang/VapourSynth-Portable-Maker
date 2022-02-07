@@ -116,6 +116,14 @@ Remove-Item -Path .\VapourSynth\vapoursynth.cp38-win_amd64.pyd, .\VapourSynth\va
 Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\LICENSE
 Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
 
+# prepare vapoursynth-$ver.dist-info
+$distinfodir = ".\VapourSynth\Lib\site-packages\VapourSynth-" + $Packages.vapoursynth.version + ".dist-info"
+New-Item -Path $distinfodir -ItemType Directory -Force | Out-Null
+@"
+Metadata-Version: 1.1
+Name: VapourSynth
+Version: $($Packages.vapoursynth.version)
+"@ | Out-File -FilePath $distinfodir\METADATA -Force
 
 Write-Output "Done."
 Pause

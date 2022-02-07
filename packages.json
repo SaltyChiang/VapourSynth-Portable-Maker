@@ -11,6 +11,7 @@
     },
     "vapoursynth": {
         "name": "VS-C-x64-R57.A3.zip",
+        "version": 57,
         "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A3/release-x64.zip",
         "hash": "FBB5585BB89077919292835902C630C8D31405D54809D64240F3818A0579AAB5BB2B0289CCA2C9E51BBEF7B489E58292EED7F5D3C29B28449884ABC3F27F78EF"
     },

@@ -5,14 +5,14 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.9-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.9/python-3.9.9-embed-amd64.zip",
-        "hash": "F834E3EFF1D36926C47CB84655C5799B4B499A304D8791F4D89802D2C30EF36B6EEC96B35D99484B006F0D50BDA5DB1DE77FF9F73DE5A71ED391C1742939F02C"
+        "name": "python-3.9.10-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.10/python-3.9.10-embed-amd64.zip",
+        "hash": "19F4246411F2CDC27959C9CA2E7FFB7EC0F966AFE2EBFC792FA3F1156BA6FDEAC006DC9FF5E464F0FCC4EDAAC0E9CFFC2C38A80E0D833088A9C56B7BA3DCF786"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A2.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A2/release-x64.zip",
-        "hash": "FB47BD5C49C968246158A7C6B0B63B7AE67D06D23D757D472B11EB2A80ECCDD286BBA941A91C199271B0BF4F3908A5B73DB64B02D123B08641F16CD97A80DCC1"
+        "name": "VS-C-x64-R57.A3.zip",
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A3/release-x64.zip",
+        "hash": "FBB5585BB89077919292835902C630C8D31405D54809D64240F3818A0579AAB5BB2B0289CCA2C9E51BBEF7B489E58292EED7F5D3C29B28449884ABC3F27F78EF"
     },
     "vseditor": {
         "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
@@ -31,9 +31,9 @@
         "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92c.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92c.7z",
-        "hash": "DFE4A8CD5EC359B5DADB3C1A92F7A5972A511DB903B593EDDD1FD505DDFF5EE1123ACBFEA163ED09EDFECFF5B4FC3DD979DBE212577CB3D3BF5BE12A22AB128E"
+        "name": "akarin-release-lexpr-amd64-v0.92e.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92e.7z",
+        "hash": "B6A8C5F00ABD6BD50CBFA7A95E4E596EA283627B30AD4EA1EEC809EB944B5BB0886A71FBC2FB6EE914D882473545273BACDD977925FA9B8673BE2F7F7B4DCA30"
     },
     "getpip": {
         "name": "get-pip.py",

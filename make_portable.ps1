@@ -113,7 +113,7 @@ Pop-Location
 Remove-Item -Path .\VapourSynth\LICENSE.txt
 Remove-Item -Path .\VapourSynth\setup.py, .\VapourSynth\MANIFEST.in
 Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
-Remove-Item -Path .\VapourSynth\vs-detect-python.bat, .\VapourSynth\VSScriptPython38.dll, .\VapourSynth\vapoursynth.cp38-win_amd64.pyd
+Remove-Item -Path .\VapourSynth\vapoursynth.cp38-win_amd64.pyd, .\VapourSynth\vapoursynth.cp310-win_amd64.pyd
 Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\LICENSE
 Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
 

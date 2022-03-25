@@ -16,9 +16,9 @@
         "hash": "FBB5585BB89077919292835902C630C8D31405D54809D64240F3818A0579AAB5BB2B0289CCA2C9E51BBEF7B489E58292EED7F5D3C29B28449884ABC3F27F78EF"
     },
     "vseditor": {
-        "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-4-AC2/vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "hash": "4C4973CB6194E24C925094A8E721BABAB3BAABF2BE0E93614630F31B6528742364B11A293E1FF9E7D3274B7C2A9B1CFD7814A8C02DD3CF6BE7CEBAA3ECE13E77"
+        "name": "vsedit-windows-x64.r19-mod-5-AC2.7z",
+        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-5-AC2/vsedit-windows-x64.r19-mod-5-AC2.7z",
+        "hash": "EA308F4910FE84EDCD932336C92533157DBC39FE5A7BFA8F83E829652ECE8EF0A7F3D78740B470998DE17BA12CDC31CD79717562D41F4603324B24FA99BCC49B"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",
@@ -32,9 +32,9 @@
         "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92e.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92e.7z",
-        "hash": "B6A8C5F00ABD6BD50CBFA7A95E4E596EA283627B30AD4EA1EEC809EB944B5BB0886A71FBC2FB6EE914D882473545273BACDD977925FA9B8673BE2F7F7B4DCA30"
+        "name": "akarin-release-lexpr-amd64-v0.92f.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92f.7z",
+        "hash": "70AE28C8842EE8E61458467A8A5E2935892284958F6DF8C8D5B44AE4C02F590C58555E0F6D94F8F91794D30E0BC688E6F7661032F75BF7F6E6DBFAA78C641F42"
     },
     "getpip": {
         "name": "get-pip.py",

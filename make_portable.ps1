@@ -100,6 +100,7 @@ Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 Copy-Item -Path .\subtext\x64\subtext.dll -Destination .\VapourSynth\vapoursynth64\coreplugins\ -Force
 
+.\VapourSynth\python.exe fix-python-path.py VapourSynth\Scripts
 
 Push-Location -Path downloads
 Remove-Item -Path 7za -Recurse -Force

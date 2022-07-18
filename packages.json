@@ -5,15 +5,15 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.10-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.10/python-3.9.10-embed-amd64.zip",
-        "hash": "19F4246411F2CDC27959C9CA2E7FFB7EC0F966AFE2EBFC792FA3F1156BA6FDEAC006DC9FF5E464F0FCC4EDAAC0E9CFFC2C38A80E0D833088A9C56B7BA3DCF786"
+        "name": "python-3.9.13-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.9.13/python-3.9.13-embed-amd64.zip",
+        "hash": "0B58B0877E61738261F442D62FB9157ABEAD571014B2F24988DF5546BEEFFCCA4B4E83EB15304556FC4306618A9B14CD6E59EAB1C2BED7FB174707C8341BE863"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A3b.zip",
-        "version": 57,
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A3/release-x64.A3b.zip",
-        "hash": "F79B42694C03507D69DAE382F040D0285F1B880BC03B892DA06541B946BBC29DA5031DA02A7FB72DBAE559677BD1DD94A1D7DE171B3840A5A4F347DF3B08A7AA"
+        "name": "VS-C-x64-R57.A4.zip",
+        "version": 9999,
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A4/release-x64.zip",
+        "hash": "23FB7FC54A5FE33B10463C27D5990A78C7B86F087326FCABF2AD0AAEA9018B555908BD0C77DA9C2A56930D6E16CE9AF7BB8E04AB033CAC2BCD4354FA8145EA19"
     },
     "vseditor": {
         "name": "vsedit-windows-x64.r19-mod-5-AC2.7z",
@@ -26,15 +26,15 @@
         "hash": "E4925631D4A7C356203AA7BC0B772F0D844AC42D88FA779FB33CA9E7CF7B34A2E22EE9FCE96D4678EADE9D749DA9AEF647E9F61FE00E9B361F6D31E2A0414139"
     },
     "vspreview": {
-        "name": "vapoursynth-preview-R55.A0.zip",
-        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R55.A0.zip",
-        "branch": "R55.A0",
-        "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
+        "name": "vapoursynth-preview-R57.A0.zip",
+        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R57.A0.zip",
+        "branch": "R57.A0",
+        "hash": "EEA78C4DBF2F2635062AA616465DCB0057E268B8181D4B6F2E55329C7DAF00744896DD3B23B2DBFF7FE8C6B52E45DFB23B7D69005B68BBD95A402DCA65B6438D"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92f.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92f.7z",
-        "hash": "70AE28C8842EE8E61458467A8A5E2935892284958F6DF8C8D5B44AE4C02F590C58555E0F6D94F8F91794D30E0BC688E6F7661032F75BF7F6E6DBFAA78C641F42"
+        "name": "akarin-release-lexpr-amd64-v0.94.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.94/akarin-release-lexpr-amd64-v0.94.7z",
+        "hash": "D91F568DCF7392216E2AF29333AF0646AA048471A73534E3C783AEA8346114DA7B5A23A1EF9F11E942410195B22659DF35A3AC9F04F09E87327C56B350E0347C"
     },
     "getpip": {
         "name": "get-pip.py",

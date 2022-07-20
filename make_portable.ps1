@@ -116,6 +116,7 @@ Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
 Remove-Item -Path .\VapourSynth\vapoursynth.cp38-win_amd64.pyd, .\VapourSynth\vapoursynth.cp310-win_amd64.pyd, .\VapourSynth\vapoursynth.cp311-win_amd64.pyd
 Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\LICENSE
 Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
+Remove-Item -Path .\VapourSynth\share -Recurse  # share\man\man1\ttx.1
 
 # prepare vapoursynth-$ver.dist-info
 $distinfodir = ".\VapourSynth\Lib\site-packages\VapourSynth-" + $Packages.vapoursynth.version + ".dist-info"

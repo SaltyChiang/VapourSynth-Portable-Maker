@@ -1,2 +1,8 @@
+# muvsfunc
 matplotlib
+# vs-mlrt
 onnx
+# https://github.com/tastysugar/AssFontSubset
+fonttools
+# bsrt2ass
+requests

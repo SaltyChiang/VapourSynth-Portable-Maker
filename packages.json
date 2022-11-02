@@ -10,10 +10,10 @@
         "hash": "0B58B0877E61738261F442D62FB9157ABEAD571014B2F24988DF5546BEEFFCCA4B4E83EB15304556FC4306618A9B14CD6E59EAB1C2BED7FB174707C8341BE863"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A4.zip",
+        "name": "VS-C-x64-R57.A5.zip",
         "version": 9999,
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A4/release-x64.zip",
-        "hash": "23FB7FC54A5FE33B10463C27D5990A78C7B86F087326FCABF2AD0AAEA9018B555908BD0C77DA9C2A56930D6E16CE9AF7BB8E04AB033CAC2BCD4354FA8145EA19"
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A5/release-x64.zip",
+        "hash": "5B723867C80E5EEF1E2C3DFAF75A7FF7A3A563E8E6BB9556B375B4791DCF6369C2F0F170A5ED202F725C3B65117D654B2D15CF8D719CEB8D66A939B7C2BF5519"
     },
     "vseditor": {
         "name": "vsedit-windows-x64.r19-mod-5-AC2.7z",
@@ -32,9 +32,9 @@
         "hash": "A07841153DAA9E14B1CB5C69A2B8F0727FAAEAE4C1436AD65F79D5FEE52B271245B9A142A14648382B8ABE190CF9C41B69F6C4A9B21A2620413A19A5A05DD456"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.94.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.94/akarin-release-lexpr-amd64-v0.94.7z",
-        "hash": "D91F568DCF7392216E2AF29333AF0646AA048471A73534E3C783AEA8346114DA7B5A23A1EF9F11E942410195B22659DF35A3AC9F04F09E87327C56B350E0347C"
+        "name": "akarin-release-lexpr-amd64-v0.95.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.95/akarin-release-lexpr-amd64-v0.95.7z",
+        "hash": "241BA5EB8C18774ECB940CF9518B1958439220AA100B4D8E0EA84A882443E06B92795178C2BF6CD8A7EE5CD4EDDB4C4274DA96156DC628C9B7476CBEEBF8D55D"
     },
     "getpip": {
         "name": "get-pip.py",

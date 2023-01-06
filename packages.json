@@ -26,15 +26,15 @@
         "hash": "E4925631D4A7C356203AA7BC0B772F0D844AC42D88FA779FB33CA9E7CF7B34A2E22EE9FCE96D4678EADE9D749DA9AEF647E9F61FE00E9B361F6D31E2A0414139"
     },
     "vspreview": {
-        "name": "vapoursynth-preview-R57.A3.zip",
-        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R57.A3.zip",
-        "branch": "R57.A3",
-        "hash": "A02BDDE83B8761F49C1FE7745CD0439454E963E7EB36DC7CC7CAC2AB05A319E3ABA116E1F7A986ED2B3F95B9522698B8DE7770C739FB563086E5CB230C101497"
+        "name": "vapoursynth-preview-R57.A4.zip",
+        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R57.A4.zip",
+        "branch": "R57.A4",
+        "hash": "C30316CFEC85B683A4B59FD14410E35D9891C066A88B840057D0EC6C0A639B55CD413E23817D1C4B71DF6534D0ECA2CD00B4B413F634139B5C4073A286CEB02C"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.95.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.95/akarin-release-lexpr-amd64-v0.95.7z",
-        "hash": "241BA5EB8C18774ECB940CF9518B1958439220AA100B4D8E0EA84A882443E06B92795178C2BF6CD8A7EE5CD4EDDB4C4274DA96156DC628C9B7476CBEEBF8D55D"
+        "name": "akarin-release-lexpr-amd64-v0.96c.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.96/akarin-release-lexpr-amd64-v0.96c.7z",
+        "hash": "bee93d78fdc866403c1f68d0ab294b74607a5bfae0dbe51b78377a6d30a588cf693df72cee2281bcd9203d6bd1f4d4d71a41906845b081867950b34a1b47d1aa"
     },
     "getpip": {
         "name": "get-pip.py",

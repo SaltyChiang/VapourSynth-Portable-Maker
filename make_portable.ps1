@@ -98,7 +98,7 @@ Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
-New-Item -Path .\VapourSynth\vapoursynth64\scripts -ItemType Directory -Force | Out-Null
+New-Item -Path .\VapourSynth\VapourSynthScripts -ItemType Directory -Force | Out-Null
 
 .\VapourSynth\python.exe fix-python-path.py VapourSynth\Scripts
 

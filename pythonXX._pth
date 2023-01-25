@@ -3,7 +3,7 @@ DLLs
 Lib
 .
 Lib\site-packages
-vapoursynth64\scripts
+VapourSynthScripts
 
 # Uncomment to run site.main() automatically
 import site

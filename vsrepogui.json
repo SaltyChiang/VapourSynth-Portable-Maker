@@ -2,10 +2,10 @@
     "Bin": "vsrepo.py",
     "win32": {
         "Binaries": "vapoursynth32\\plugins",
-        "Scripts": "vapoursynth64\\scripts"
+        "Scripts": "VapourSynthScripts"
     },
     "win64": {
         "Binaries": "vapoursynth64\\plugins",
-        "Scripts": "vapoursynth64\\scripts"
+        "Scripts": "VapourSynthScripts"
     }
 }

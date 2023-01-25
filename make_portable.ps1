@@ -54,9 +54,11 @@ if ( -Not (Test-Path -Path VapourSynth\DLLs) ) {
     New-Item -Path .\VapourSynth\DLLs -ItemType Directory -Force | Out-Null
 }
 Expand-Archive -Path .\downloads\$($Packages.python.name) -DestinationPath .\VapourSynth -Force
-$PythonPth = (Get-Item .\VapourSynth\python*._pth).Name
-$PythonZip = (Get-Item .\VapourSynth\python*._pth).BaseName + ".zip"
-Set-Content -Path .\VapourSynth\$PythonPth -Value (Get-Content -Path .\pythonXX._pth -Raw).Replace("pythonXX.zip", $PythonZip)
+$PythonVersion = (Get-Item .\VapourSynth\python*._pth).BaseName
+$PythonEmbeddedPth = $PythonVersion + "._pth"
+$PythonPth = $PythonVersion + ".pth"
+Move-Item -Path .\VapourSynth\$PythonEmbeddedPth -Destination .\VapourSynth\$PythonPth -Force
+Set-Content -Path .\VapourSynth\$PythonPth -Value (Get-Content -Path .\pythonXX.pth -Raw).Replace("pythonXX", $PythonVersion)
 Move-Item -Path .\VapourSynth\python.cat -Destination .\VapourSynth\DLLs\ -Force
 Move-Item -Path .\VapourSynth\*.pyd -Destination .\VapourSynth\DLLs\ -Force
 Move-Item -Path .\VapourSynth\*.dll -Destination .\VapourSynth\DLLs\ -Force
@@ -119,14 +121,10 @@ Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\L
 Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
 Remove-Item -Path .\VapourSynth\share -Recurse  # share\man\man1\ttx.1
 
-# prepare vapoursynth-$ver.dist-info
-$distinfodir = ".\VapourSynth\Lib\site-packages\VapourSynth-" + $Packages.vapoursynth.version + ".dist-info"
-New-Item -Path $distinfodir -ItemType Directory -Force | Out-Null
-@"
-Metadata-Version: 1.1
-Name: VapourSynth
-Version: $($Packages.vapoursynth.version)
-"@ | Out-File -FilePath $distinfodir\METADATA -Force
+# Prepare VapourSynth-9999.dist-info
+$DistinfoDir = ".\VapourSynth\Lib\site-packages\VapourSynth-9999.dist-info"
+New-Item -Path $DistinfoDir -ItemType Directory -Force | Out-Null
+Copy-Item -Path .\METADATA -Destination $DistinfoDir -Force
 
 Write-Output "Done."
 Pause

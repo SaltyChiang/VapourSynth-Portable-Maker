@@ -5,19 +5,20 @@
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
     "python": {
-        "name": "python-3.9.10-embed-amd64.zip",
-        "url": "https://www.python.org/ftp/python/3.9.10/python-3.9.10-embed-amd64.zip",
-        "hash": "19F4246411F2CDC27959C9CA2E7FFB7EC0F966AFE2EBFC792FA3F1156BA6FDEAC006DC9FF5E464F0FCC4EDAAC0E9CFFC2C38A80E0D833088A9C56B7BA3DCF786"
+        "name": "python-3.11.1-embed-amd64.zip",
+        "url": "https://www.python.org/ftp/python/3.11.1/python-3.11.1-embed-amd64.zip",
+        "hash": "762D16B7C5CB8E55ED9AB015B8E12015D494DD1FFCAE44534F25F61DCFAC9D7E6E7A1D5E21D9284271E6114D869165D0DCD2AB4219F40A834172EE816ECD4604"
     },
     "vapoursynth": {
-        "name": "VS-C-x64-R57.A3.zip",
-        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A3/release-x64.zip",
-        "hash": "FBB5585BB89077919292835902C630C8D31405D54809D64240F3818A0579AAB5BB2B0289CCA2C9E51BBEF7B489E58292EED7F5D3C29B28449884ABC3F27F78EF"
+        "name": "VS-C-x64-R57.A7.zip",
+        "version": 9999,
+        "url": "https://github.com/AmusementClub/vapoursynth-classic/releases/download/R57.A7/release-x64.zip",
+        "hash": "2933059FDE64222D856C27BEA5EB8DACFF6D60BAF5DD1DD401E178883AB6F344A7CF7D64AB898C8240E0402A9395FD7964BE851D6CE5225BE132DF030B896AC8"
     },
     "vseditor": {
-        "name": "vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-4-AC2/vsedit-windows-x64.r19-mod-4-AC2.7z",
-        "hash": "4C4973CB6194E24C925094A8E721BABAB3BAABF2BE0E93614630F31B6528742364B11A293E1FF9E7D3274B7C2A9B1CFD7814A8C02DD3CF6BE7CEBAA3ECE13E77"
+        "name": "vsedit-windows-x64.r19-mod-5-AC2.7z",
+        "url": "https://github.com/AmusementClub/VapourSynth-Editor/releases/download/r19-mod-5-AC2/vsedit-windows-x64.r19-mod-5-AC2.7z",
+        "hash": "EA308F4910FE84EDCD932336C92533157DBC39FE5A7BFA8F83E829652ECE8EF0A7F3D78740B470998DE17BA12CDC31CD79717562D41F4603324B24FA99BCC49B"
     },
     "vsrepogui": {
         "name": "VSRepoGUI-0.9.6.zip",
@@ -25,15 +26,15 @@
         "hash": "E4925631D4A7C356203AA7BC0B772F0D844AC42D88FA779FB33CA9E7CF7B34A2E22EE9FCE96D4678EADE9D749DA9AEF647E9F61FE00E9B361F6D31E2A0414139"
     },
     "vspreview": {
-        "name": "vapoursynth-preview-R55.A0.zip",
-        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R55.A0.zip",
-        "branch": "R55.A0",
-        "hash": "F2593DDDBF35B4F1E05AD752EF12CA976E7CE9EA14AA36D6301A2A444C74044EDF72C76BC61B79A0FD3ED8FA0CDE40F70F81DE5B29187070C80CC21B2E0F5B99"
+        "name": "vapoursynth-preview-R57.A4.zip",
+        "url": "https://github.com/AkarinVS/vapoursynth-preview/archive/refs/tags/R57.A4.zip",
+        "branch": "R57.A4",
+        "hash": "C30316CFEC85B683A4B59FD14410E35D9891C066A88B840057D0EC6C0A639B55CD413E23817D1C4B71DF6534D0ECA2CD00B4B413F634139B5C4073A286CEB02C"
     },
     "lexpr": {
-        "name": "akarin-release-lexpr-amd64-v0.92e.7z",
-        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.92/akarin-release-lexpr-amd64-v0.92e.7z",
-        "hash": "B6A8C5F00ABD6BD50CBFA7A95E4E596EA283627B30AD4EA1EEC809EB944B5BB0886A71FBC2FB6EE914D882473545273BACDD977925FA9B8673BE2F7F7B4DCA30"
+        "name": "akarin-release-lexpr-amd64-v0.96c.7z",
+        "url": "https://github.com/AkarinVS/vapoursynth-plugin/releases/download/v0.96/akarin-release-lexpr-amd64-v0.96c.7z",
+        "hash": "bee93d78fdc866403c1f68d0ab294b74607a5bfae0dbe51b78377a6d30a588cf693df72cee2281bcd9203d6bd1f4d4d71a41906845b081867950b34a1b47d1aa"
     },
     "getpip": {
         "name": "get-pip.py",
@@ -50,9 +51,9 @@
         "hash": "40261F972429BC44A79BD1C362CE29F62A4C84A118181A6CDE9B768CE7B495644932666FB4BADB70CA21C10DA6DC50CE11F67B6515E7F1F6ABEC588C1B4E8A88"
     },
     "subtext": {
-        "name": "subtext_R2.1_0.15.2.zip",
-        "url": "https://github.com/Masaiki/subtext/releases/download/R2.1/subtext_R2.1_0.15.2.zip",
-        "hash": "CE856957C9B0AC9C8BFFAE274290A086FA1A68B2984B2CD5783F9DF6EA07336DD4F9C46D6F952F0AD16373D7C53AC0E6B7A18DEAAD23AA7D5FC67C9E80A28FA7"
+        "name": "subtext_R3.1_0.16.0.zip",
+        "url": "https://github.com/Masaiki/subtext/releases/download/R3.1/subtext_R3.1_0.16.0.zip",
+        "hash": "CBF63B9E34125A0B4DAF6D721D394ED874B1FB7A423A96BDB861A1EBFDD07F5944880305B66C60287A682D586DE972FBDB9BA5CCFDA1DE3264887A6D3565239E"
     },
     "vsstubs": {
         "name": "vsstubs.zip",

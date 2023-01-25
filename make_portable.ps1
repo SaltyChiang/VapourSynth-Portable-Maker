@@ -93,13 +93,14 @@ if ( Test-Path -Path .\VapourSynth\__pycache__ ) {
     Remove-Item -Path .\VapourSynth\__pycache__ -Recurse -Force
 }
 Move-Item -Path .\VapourSynth\sitecustomize.py -Destination .\VapourSynth\Lib\ -Force
-Move-Item -Path .\VapourSynth\vapoursynth.cp39-win_amd64.pyd -Destination .\VapourSynth\Lib\site-packages\ -Force
+Move-Item -Path .\VapourSynth\vapoursynth.cp311-win_amd64.pyd -Destination .\VapourSynth\Lib\site-packages\ -Force
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsrepogui.json -Destination .\VapourSynth\ -Force
 Copy-Item -Path .\vsedit.config -Destination .\VapourSynth\ -Force
 New-Item -Path .\VapourSynth\vapoursynth64\scripts -ItemType Directory -Force | Out-Null
 
+.\VapourSynth\python.exe fix-python-path.py VapourSynth\Scripts
 
 Push-Location -Path downloads
 Remove-Item -Path 7za -Recurse -Force
@@ -113,10 +114,19 @@ Pop-Location
 Remove-Item -Path .\VapourSynth\LICENSE.txt
 Remove-Item -Path .\VapourSynth\setup.py, .\VapourSynth\MANIFEST.in
 Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
-Remove-Item -Path .\VapourSynth\vapoursynth.cp38-win_amd64.pyd, .\VapourSynth\vapoursynth.cp310-win_amd64.pyd
+Remove-Item -Path .\VapourSynth\vapoursynth.cp38-win_amd64.pyd, .\VapourSynth\vapoursynth.cp39-win_amd64.pyd, .\VapourSynth\vapoursynth.cp310-win_amd64.pyd
 Remove-Item -Path .\VapourSynth\README, .\VapourSynth\CHANGELOG, .\VapourSynth\LICENSE
 Remove-Item -Path .\VapourSynth\vsedit.ico, .\VapourSynth\vsedit.svg
+Remove-Item -Path .\VapourSynth\share -Recurse  # share\man\man1\ttx.1
 
+# prepare vapoursynth-$ver.dist-info
+$distinfodir = ".\VapourSynth\Lib\site-packages\VapourSynth-" + $Packages.vapoursynth.version + ".dist-info"
+New-Item -Path $distinfodir -ItemType Directory -Force | Out-Null
+@"
+Metadata-Version: 1.1
+Name: VapourSynth
+Version: $($Packages.vapoursynth.version)
+"@ | Out-File -FilePath $distinfodir\METADATA -Force
 
 Write-Output "Done."
 Pause

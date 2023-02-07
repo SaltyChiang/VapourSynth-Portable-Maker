@@ -33,13 +33,16 @@ if ( -Not (Test-Path -Path downloads) ) {
 
 Push-Location -Path .\downloads
 DownloadFile -Uri $Packages.'7za'.url -OutFile $Packages.'7za'.name -Hash $Packages.'7za'.hash
-DownloadFile -Uri $Packages.python.url -OutFile $Packages.python.name -Hash $Packages.python.hash
+# DownloadFile -Uri $Packages.python.url -OutFile $Packages.python.name -Hash $Packages.python.hash
+DownloadFile -Uri $Packages.pythoncore.url -OutFile $Packages.pythoncore.name -Hash $Packages.pythoncore.hash
+DownloadFile -Uri $Packages.pythonexe.url -OutFile $Packages.pythonexe.name -Hash $Packages.pythonexe.hash
+DownloadFile -Uri $Packages.pythonlib.url -OutFile $Packages.pythonlib.name -Hash $Packages.pythonlib.hash
 DownloadFile -Uri $Packages.vapoursynth.url -OutFile $Packages.vapoursynth.name -Hash $Packages.vapoursynth.hash
 DownloadFile -Uri $Packages.vseditor.url -OutFile $Packages.vseditor.name -Hash $Packages.vseditor.hash
 # DownloadFile -Uri $Packages.vsrepogui.url -OutFile $Packages.vsrepogui.name -Hash $Packages.vsrepogui.hash
 DownloadFile -Uri $Packages.vspreview.url -OutFile $Packages.vspreview.name -Hash $Packages.vspreview.hash
 DownloadFile -Uri $Packages.lexpr.url -OutFile $Packages.lexpr.name -Hash $Packages.lexpr.hash
-DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
+# DownloadFile -Uri $Packages.getpip.url -OutFile $Packages.getpip.name
 DownloadFile -Uri $Packages.ocr.url -OutFile $Packages.ocr.name -Hash $Packages.ocr.hash
 DownloadFile -Uri $Packages.imwri.url -OutFile $Packages.imwri.name -Hash $Packages.imwri.hash
 DownloadFile -Uri $Packages.subtext.url -OutFile $Packages.subtext.name -Hash $Packages.subtext.hash
@@ -47,24 +50,26 @@ DownloadFile -Uri $Packages.vsstubs.url -OutFile $Packages.vsstubs.name
 Pop-Location
 
 
-if ( Test-Path -Path .\VapourSynth\python*._pth ) {
-    Remove-Item -Path .\VapourSynth\python*._pth -Force
+if ( -Not (Test-Path -Path VapourSynth) ) {
+    New-Item -Path VapourSynth -ItemType Directory -Force | Out-Null
 }
-if ( -Not (Test-Path -Path VapourSynth\DLLs) ) {
-    New-Item -Path .\VapourSynth\DLLs -ItemType Directory -Force | Out-Null
-}
-Expand-Archive -Path .\downloads\$($Packages.python.name) -DestinationPath .\VapourSynth -Force
-$PythonVersion = (Get-Item .\VapourSynth\python*._pth).BaseName
-$PythonEmbeddedPth = $PythonVersion + "._pth"
-$PythonPth = $PythonVersion + ".pth"
-Move-Item -Path .\VapourSynth\$PythonEmbeddedPth -Destination .\VapourSynth\$PythonPth -Force
-Set-Content -Path .\VapourSynth\$PythonPth -Value (Get-Content -Path .\pythonXX.pth -Raw).Replace("pythonXX", $PythonVersion)
-Move-Item -Path .\VapourSynth\python.cat -Destination .\VapourSynth\DLLs\ -Force
-Move-Item -Path .\VapourSynth\*.pyd -Destination .\VapourSynth\DLLs\ -Force
-Move-Item -Path .\VapourSynth\*.dll -Destination .\VapourSynth\DLLs\ -Force
-Move-Item -Path .\VapourSynth\DLLs\python*.dll -Destination .\VapourSynth\ -Force
-Move-Item -Path .\VapourSynth\DLLs\vcruntime*.dll -Destination .\VapourSynth\ -Force
-Copy-Item -Path .\sitecustomize.py -Destination .\VapourSynth\ -Force
+# Expand-Archive -Path .\downloads\$($Packages.python.name) -DestinationPath .\VapourSynth -Force
+$VapourSynthPath = (Get-Item .\VapourSynth).FullName
+Start-Process -Wait -FilePath msiexec -ArgumentList /a, (Get-Item .\downloads\$($Packages.pythoncore.name)).FullName, /qn, TARGETDIR=$VapourSynthPath
+Start-Process -Wait -FilePath msiexec -ArgumentList /a, (Get-Item .\downloads\$($Packages.pythonexe.name)).FullName, /qn, TARGETDIR=$VapourSynthPath
+Start-Process -Wait -FilePath msiexec -ArgumentList /a, (Get-Item .\downloads\$($Packages.pythonlib.name)).FullName, /qn, TARGETDIR=$VapourSynthPath
+# $PythonVersion = (Get-Item .\VapourSynth\python*._pth).BaseName
+# $PythonEmbeddedPth = $PythonVersion + "._pth"
+# $PythonPth = $PythonVersion + ".pth"
+# Move-Item -Path .\VapourSynth\$PythonEmbeddedPth -Destination .\VapourSynth\$PythonPth -Force
+# Set-Content -Path .\VapourSynth\$PythonPth -Value (Get-Content -Path .\pythonXX.pth -Raw).Replace("pythonXX", $PythonVersion)
+# Move-Item -Path .\VapourSynth\python.cat -Destination .\VapourSynth\DLLs\ -Force
+# Move-Item -Path .\VapourSynth\*.pyd -Destination .\VapourSynth\DLLs\ -Force
+# Move-Item -Path .\VapourSynth\*.dll -Destination .\VapourSynth\DLLs\ -Force
+# Move-Item -Path .\VapourSynth\DLLs\python*.dll -Destination .\VapourSynth\ -Force
+# Move-Item -Path .\VapourSynth\DLLs\vcruntime*.dll -Destination .\VapourSynth\ -Force
+Copy-Item -Path .\sitecustomize.py -Destination .\VapourSynth\Lib\site-packages\ -Force
+Copy-Item -Path .\vsscripts.pth -Destination .\VapourSynth\ -Force
 
 
 Push-Location -Path downloads
@@ -82,7 +87,8 @@ Copy-Item -Path .\subtext\x64\subtext.dll -Destination ..\VapourSynth\vapoursynt
 Pop-Location
 
 
-.\VapourSynth\python.exe .\downloads\get-pip.py --no-warn-script-location
+# .\VapourSynth\python.exe .\downloads\get-pip.py --no-warn-script-location
+.\VapourSynth\python.exe -m ensurepip
 $Requirements = Get-Item .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\requirements.txt
 Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String -Pattern 'vapoursynth' -NotMatch )
 .\VapourSynth\python.exe -m pip install -r $Requirements --no-warn-script-location
@@ -91,10 +97,6 @@ Set-Content -Path $Requirements (Get-Content -Path $Requirements | Select-String
 .\VapourSynth\python.exe -m vsstubs install
 
 
-if ( Test-Path -Path .\VapourSynth\__pycache__ ) {
-    Remove-Item -Path .\VapourSynth\__pycache__ -Recurse -Force
-}
-Move-Item -Path .\VapourSynth\sitecustomize.py -Destination .\VapourSynth\Lib\ -Force
 Move-Item -Path .\VapourSynth\vapoursynth.cp311-win_amd64.pyd -Destination .\VapourSynth\Lib\site-packages\ -Force
 Copy-Item -Path .\downloads\vspreview\vapoursynth-preview-$($Packages.vspreview.branch)\vspreview -Destination .\VapourSynth\Lib\site-packages\ -Recurse -Force
 # Copy-Item -Path .\downloads\VSRepoGUI\VSRepoGUI.exe -Destination .\VapourSynth\ -Force
@@ -113,7 +115,8 @@ Remove-Item -Path subtext -Recurse -Force
 Pop-Location
 
 # Remove some extra files we don't need.
-Remove-Item -Path .\VapourSynth\LICENSE.txt
+Remove-Item -Path .\VapourSynth\*.msi  # msiexec will copy all .msi files here
+Remove-Item -Path .\VapourSynth\LICENSE.txt, .\VapourSynth\NEWS.txt
 Remove-Item -Path .\VapourSynth\setup.py, .\VapourSynth\MANIFEST.in
 Remove-Item -Path .\VapourSynth\VapourSynth_portable.egg-info -Recurse
 Remove-Item -Path .\VapourSynth\vapoursynth.*.pyd

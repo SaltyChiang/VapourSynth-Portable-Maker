@@ -1,9 +1,0 @@
-pythonXX.zip
-DLLs
-Lib
-.
-Lib\site-packages
-VapourSynthScripts
-
-# Uncomment to run site.main() automatically
-import site

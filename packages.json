@@ -4,6 +4,21 @@
         "url": "https://www.7-zip.org/a/7za920.zip",
         "hash": "84E830C91A0E8AE499CC4814080DA6569D8A6ACBDDC585C8B62ABC86C809793AEB669B0A741063A379FD281ADE85F120BC27EFEB67D63BF961BE893EEC8BC3B3"
     },
+    "pythoncore": {
+        "name": "core.msi",
+        "url": "https://www.python.org/ftp/python/3.11.1/amd64/core.msi",
+        "hash": "91382064B1AB221F2E1B86A9809D9FEB1E98DC4F387F5681AF46DD9E4D167020A0AEC1B29C929904792429062B695639D55FC166DB8B575BEF274FD4161B15D9"
+    },
+    "pythonexe": {
+        "name": "exe.msi",
+        "url": "https://www.python.org/ftp/python/3.11.1/amd64/exe.msi",
+        "hash": "F18E4D62C4C48A0BE4F9F5AE7FB86CD2688AEFD077DA16564214195D88A4493A9D8F765042F0392DE73964AE25D8AF1A8FB6230EB0DBC6403B75E2C89079F087"
+    },
+    "pythonlib": {
+        "name": "lib.msi",
+        "url": "https://www.python.org/ftp/python/3.11.1/amd64/lib.msi",
+        "hash": "23DA41E02120E0B38863FC48D256CD5D45E8E060F48A698AA0F2DD1333C97668C8A568F508D36AE660625713FBA9B41F81952B2B6D60AE0298C9968D787ABEB0"
+    },
     "python": {
         "name": "python-3.11.1-embed-amd64.zip",
         "url": "https://www.python.org/ftp/python/3.11.1/python-3.11.1-embed-amd64.zip",
